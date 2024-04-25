@@ -54,9 +54,9 @@ public class OrderTest { <br>
     order.calculateTotal(10.0, 2); <br> 
     order.placeOrder("John Doe", "123 Main St"); <br> 
 
-    // These methods might not be needed for all orders<br> 
-    order.generateInvoice("order_123.pdf");<br> 
-    order.sendEmailNotification("johndoe@example.com");<br> 
+    // These methods might not be needed for all orders
+    order.generateInvoice("order_123.pdf");
+    order.sendEmailNotification("johndoe@example.com");
   }<br> 
 }<br> 
 
