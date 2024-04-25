@@ -9,55 +9,55 @@
 𝙸𝚖𝚙𝚛𝚘𝚟𝚎 𝚝𝚑𝚎 𝚏𝚘𝚕𝚕𝚘𝚠𝚒𝚗𝚐 𝚌𝚘𝚍𝚎𝚜 𝚝𝚘 𝚒𝚖𝚙𝚕𝚎𝚖𝚎𝚗𝚝 𝚂𝙾𝙻𝙸𝙳 𝚙𝚛𝚒𝚗𝚌𝚒𝚙𝚕𝚎𝚜 𝚒𝚗 𝙾𝙾𝙿.
 
 
-public interface Order {
+public interface Order {<br> 
 
-  void calculateTotal(double price, int quantity);
+  void calculateTotal(double price, int quantity);<br> 
 
-  void placeOrder(String customerName, String address);
+  void placeOrder(String customerName, String address);<br> 
 
-  void generateInvoice(String fileName);
+  void generateInvoice(String fileName);<br> 
 
-  void sendEmailNotification(String email);
-}
+  void sendEmailNotification(String email);<br> 
+}<br> 
 
-public class OrderAction implements Order {
+public class OrderAction implements Order {<br> 
 
-  @Override
-  public void calculateTotal(double price, int quantity) {
-    double total = price * quantity;
-    System.out.println("Order total: $" + total);
-  }
-
-  @Override
-  public void placeOrder(String customerName, String address) {
-    // Simulate placing order in a system
-    System.out.println("Order placed for " + customerName + " at " + address);
-  }
+  @Override<br> 
+  public void calculateTotal(double price, int quantity) {<br> 
+    double total = price * quantity;<br> 
+    System.out.println("Order total: $" + total);<br> 
+  }<br> 
 
   @Override
-  public void generateInvoice(String fileName) {
-    // Simulate generating invoice file
-    System.out.println("Invoice generated: " + fileName);
-  }
+  public void placeOrder(String customerName, String address) {<br> 
+    // Simulate placing order in a system<br> 
+    System.out.println("Order placed for " + customerName + " at " + address);<br> 
+  }<br> 
 
   @Override
-  public void sendEmailNotification(String email) {
-    // Simulate sending email notification
-    System.out.println("Email notification sent to: " + email);
-  }
-}
+  public void generateInvoice(String fileName) {<br> 
+    // Simulate generating invoice file<br> 
+    System.out.println("Invoice generated: " + fileName);<br> 
+  }<br> 
 
-public class OrderTest {
+  @Override<br> 
+  public void sendEmailNotification(String email) {<br> 
+    // Simulate sending email notification <br> 
+    System.out.println("Email notification sent to: " + email);<br> 
+  }<br> 
+}<br> 
 
-  public static void main(String[] args) {
-    Order order = new OrderAction();
-    order.calculateTotal(10.0, 2);
-    order.placeOrder("John Doe", "123 Main St");
+public class OrderTest { <br> 
 
-    // These methods might not be needed for all orders
-    order.generateInvoice("order_123.pdf");
-    order.sendEmailNotification("johndoe@example.com");
-  }
-}
+  public static void main(String[] args) { <br>  
+    Order order = new OrderAction(); <br>  
+    order.calculateTotal(10.0, 2); <br> 
+    order.placeOrder("John Doe", "123 Main St"); <br> 
+
+    // These methods might not be needed for all orders<br> 
+    order.generateInvoice("order_123.pdf");<br> 
+    order.sendEmailNotification("johndoe@example.com");<br> 
+  }<br> 
+}<br> 
 
 
